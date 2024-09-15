@@ -20,7 +20,7 @@ class Homepage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: SizedBox(
-          height: 200,
+          height: 350,
           child: MyBarGraph(
             weeksummary: weeksummary,
           ),

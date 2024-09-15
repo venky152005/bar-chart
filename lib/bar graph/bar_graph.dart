@@ -23,11 +23,39 @@ class MyBarGraph extends StatelessWidget {
       satamount: weeksummary[6],
     );
     mybarData.intializeBarData();
-
     return BarChart(
       BarChartData(
+        gridData: const FlGridData(show: false),
+        borderData: FlBorderData(show: false),
+        titlesData: const FlTitlesData(
+          show: true,
+          rightTitles: AxisTitles(
+            sideTitles: SideTitles(showTitles: false),
+          ),
+          topTitles: AxisTitles(
+            sideTitles: SideTitles(showTitles: false),
+          ),
+        ),
         maxY: 100,
         minY: 0,
+        barGroups: mybarData.barData
+            .map(
+              (data) => BarChartGroupData(
+                x: data.x,
+                barRods: [
+                  BarChartRodData(
+                      toY: data.y,
+                      borderRadius: BorderRadius.circular(5),
+                      width: 15,
+                      backDrawRodData: BackgroundBarChartRodData(
+                        show: true,
+                        toY: 100,
+                        color: Colors.blue[50],
+                      )),
+                ],
+              ),
+            )
+            .toList(),
       ),
     );
   }

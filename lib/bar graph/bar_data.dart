@@ -24,12 +24,12 @@ class BarData {
   void intializeBarData() {
     barData = [
       IndividualBar(x: 0, y: sunamount),
-      IndividualBar(x: 0, y: monamount),
-      IndividualBar(x: 0, y: tueamount),
-      IndividualBar(x: 0, y: wedamount),
-      IndividualBar(x: 0, y: thuamount),
-      IndividualBar(x: 0, y: friamount),
-      IndividualBar(x: 0, y: satamount),
+      IndividualBar(x: 1, y: monamount),
+      IndividualBar(x: 2, y: tueamount),
+      IndividualBar(x: 3, y: wedamount),
+      IndividualBar(x: 4, y: thuamount),
+      IndividualBar(x: 5, y: friamount),
+      IndividualBar(x: 6, y: satamount),
     ];
   }
 }
